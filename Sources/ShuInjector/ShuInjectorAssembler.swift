@@ -4,7 +4,7 @@
 
 import Foundation
 
-final class ShuInjectorAssembler {
+public final class ShuInjectorAssembler {
     private static var shared = ShuInjectorAssembler()
 
     private init() {}

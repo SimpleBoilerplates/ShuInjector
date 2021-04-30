@@ -4,12 +4,12 @@
 
 import Foundation
 
-protocol ShuiAssembler {
+public protocol ShuiAssembler {
     func assemble()
     func disassemble()
 }
 
-extension ShuiAssembler {
+public extension ShuiAssembler {
     func disassemble() {}
 }
 
@@ -19,7 +19,7 @@ extension ShuiAssembler {
 // @Inject private(set) var store: Store //(Inside a view or viewmodel)
 
 @propertyWrapper
-struct Inject<T> {
+public struct Inject<T> {
     var wrappedValue: T
 
     init() {
@@ -27,7 +27,7 @@ struct Inject<T> {
     }
 }
 
-final class ShuInjector {
+public final class ShuInjector {
     private var dependencies = [String: Any]()
     private static var shared = ShuInjector()
     
