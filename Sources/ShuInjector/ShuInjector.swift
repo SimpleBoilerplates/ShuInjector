@@ -20,7 +20,7 @@ public extension ShuiAssembler {
 
 @propertyWrapper
 public struct Inject<T> {
-    var wrappedValue: T
+   public var wrappedValue: T
 
     init() {
         wrappedValue = ShuInjector.resolve()
