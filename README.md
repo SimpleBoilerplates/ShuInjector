@@ -27,19 +27,26 @@ First define your assembler, like HTTP assembler or router etc
 
 ```
 final class HTTPAssembler: ShuiAssembler {
-	func assemble() {
-		let provider = MoyaProvider<MultiTarget>(callbackQueue: DispatchQueue.main)
-		ShuInjector.register(provider)
-		ShuInjector.register(HttpManager())
-	}
+ func assemble() {
+   let provider = MoyaProvider<MultiTarget>(callbackQueue: DispatchQueue.main)
+   ShuInjector.register(provider)
+   ShuInjector.register(HttpManager())
+ }
 }
 ```
-	
+
+Now Assemble it anywhere top hiearchy, before their usage
+```
+ShuInjectorAssembler.assemble(assemblers: [
+ HTTPAssembler()   
+])
+```
+
 Now can you use that provider from any class that will be initialized after assembling. As example 
 
 ```
 class HttpManager {
-	@Inject var provider: MoyaProvider<MultiTarget>
+  @Inject var provider: MoyaProvider<MultiTarget>
 }
 ```
 
@@ -47,7 +54,7 @@ This HTTP manager now can be accessed from any class that will be initialized la
 
 ```
 class AuthRepository {
-	@Inject var httpManager: HttpManager
+  @Inject var httpManager: HttpManager
 }
 ```
 And so on.
