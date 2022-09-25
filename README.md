@@ -2,7 +2,7 @@
  A very Simple Dependency Injector to be used with SwiftUI
  
  
-##Installation
+## Installation
 
 #### Swift Package Manager
 To install `ShuInjector` using [Swift Package Manager](https://swift.org/package-manager/), add
@@ -15,9 +15,9 @@ to your Package.swift, then follow the integration tutorial [here](https://swift
 Coming soon
 
 
-##Usage
+## Usage
 
-###Import
+### Import
 
 ```
 import ShuInjector
