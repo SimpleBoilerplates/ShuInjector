@@ -35,7 +35,7 @@ final class HTTPAssembler: ShuiAssembler {
 }
 ```
 
-Now Assemble it anywhere top hiearchy, before their usage
+Now Assemble it anywhere maintaining hiearchy, before their usage
 ```
 ShuInjectorAssembler.assemble(assemblers: [
  HTTPAssembler()   
