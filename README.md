@@ -59,7 +59,7 @@ class AuthRepository {
 ```
 And so on.
 
-Architecture should be like you can define Several **ShuiAssembler** for different purposes, different features, HTTPAssembler should be defined on SceneDelegate level, there can be other **ShuiAssembler** for different purposes, like **AppAssembler**, that will handle Router, User Token etc. 
+Architecture should be like you can define Several **ShuiAssembler** for different purposes, different features, HTTPAssembler should be defined on Shared level, there can be other **ShuiAssembler** for different purposes, like **AppAssembler**, that will handle Router, User Token etc. 
 
 
 ## Contact
